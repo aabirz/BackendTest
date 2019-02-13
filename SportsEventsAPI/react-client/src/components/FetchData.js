@@ -7,8 +7,11 @@ export class FetchData extends Component {
         super(props);
         this.state = { events: [], loading: true };
 
+        
+    }
+    componentDidMount() {
         fetch('https://localhost:44343/api/values')
-            .then(response => { console.log(response);response.json() })
+            .then(response => response.json())
             .then(data => {
                 this.setState({ events: data, loading: false });
             });
@@ -48,7 +51,7 @@ export class FetchData extends Component {
 
         return (
             <div>
-                <h1>Fitogram Backend Test</h1>
+                <h1>Backend Test</h1>
                 <p>The backend task is to create a Web API using .net core to return a list of sports events of a provider..</p>
                 {contents}
             </div>
