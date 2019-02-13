@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router';
 import { FetchData } from './components/FetchData';
 import './App.css';
 

@@ -34,6 +34,13 @@ namespace SportsEventsAPI
             services.AddDbContext<EventContext>
                 (options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -48,7 +55,7 @@ namespace SportsEventsAPI
             {
                 app.UseHsts();
             }
-
+            app.UseCors("MyPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

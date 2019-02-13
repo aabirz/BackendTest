@@ -7,8 +7,8 @@ export class FetchData extends Component {
         super(props);
         this.state = { events: [], loading: true };
 
-        fetch('http://localhost:9462')
-            .then(response => response.json())
+        fetch('https://localhost:44343/api/values')
+            .then(response => { console.log(response);response.json() })
             .then(data => {
                 this.setState({ events: data, loading: false });
             });
