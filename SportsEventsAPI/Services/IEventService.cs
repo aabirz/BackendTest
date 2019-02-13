@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportsEventsAPI.Services
 {
-    interface IEventService
+    public interface IEventService
     {
         List<Event> GetAllEvents();
     }
