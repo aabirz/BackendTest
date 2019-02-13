@@ -29,7 +29,8 @@ namespace SportsEventsAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IEventService, EventService>();
-
+            services.AddTransient<IEventRepository, EventRepository>();
+            
             services.AddDbContext<EventContext>
                 (options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
