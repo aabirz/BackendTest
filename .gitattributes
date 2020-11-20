@@ -61,5 +61,4 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
-.gitattributes !filter !diff
-SportsEventsTest/SportsEventsTest.csproj filter=git-crypt diff=git-crypt
+SportsEvents.sln filter=git-crypt diff=git-crypt
