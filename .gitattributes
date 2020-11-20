@@ -62,4 +62,4 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 .gitattributes !filter !diff
-secretdir/** filter=git-crypt diff=git-crypt
+SportsEventsTest/** filter=git-crypt diff=git-crypt
